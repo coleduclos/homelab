@@ -9,7 +9,6 @@ spec:
   routes:
     - kind: Rule
       match: Host(`ha.localdomain`)
-      priority: 12
       services:
         - name: home-assistant
           port: 8123
