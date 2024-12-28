@@ -8,7 +8,7 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`ha.localdomain`)
+      match: Host(`haas.localdomain`)
       services:
         - name: home-assistant
           port: 8123
