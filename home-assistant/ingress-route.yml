@@ -8,7 +8,7 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`hass.localdomain`)
+      match: Host(`hass.home.coleduclos.io`)
       services:
         - name: home-assistant
           port: 8123
