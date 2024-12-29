@@ -12,4 +12,5 @@ spec:
       services:
         - name: home-assistant
           port: 8123
-  tls: {}
+  tls:
+    secretName: home-assistant-ingressroute-certificate-secret
