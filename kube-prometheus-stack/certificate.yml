@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: grafana-ingressroute-certificate
+spec:
+  # Secret names are always required.
+  secretName: grafana-ingressroute-certificate-secret
+  issuerRef:
+    name: route53-cluster-issuer
+    kind: ClusterIssuer
+  dnsNames:
+    - grafana.home.coleduclos.io
