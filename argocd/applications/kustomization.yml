@@ -4,4 +4,3 @@ namespace: argocd
 resources:
   - cert-manager-application.yml
   - home-assistant-application.yml
-  - prometheus-application.yml
