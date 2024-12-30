@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: argocd
 resources:
-  - https://raw.githubusercontent.com/argoproj/argo-cd/v2.9.22/manifests/install.yaml
+  - https://raw.githubusercontent.com/argoproj/argo-cd/v2.10.17/manifests/install.yaml
   - ingress-route.yml
   - argocd-certificate.yml
   - applications/
