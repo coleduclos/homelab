@@ -18,4 +18,5 @@ spec:
   syncPolicy:
     automated: {}
     syncOptions:
+      - ServerSideApply=true
       - CreateNamespace=true
