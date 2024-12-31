@@ -9,5 +9,7 @@ spec:
   ports:
   - port: 1883
     targetPort: 1883
+    name: mqtt
   - port: 9001
     targetPort: 9001
+    name: wss
