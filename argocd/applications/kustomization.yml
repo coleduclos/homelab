@@ -5,3 +5,4 @@ resources:
   - cert-manager-application.yml
   - home-assistant-application.yml
   - kube-prometheus-stack-application.yml
+  - zigbee2mqtt-application.yml
