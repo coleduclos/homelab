@@ -13,3 +13,4 @@ spec:
   - port: 9001
     targetPort: 9001
     name: wss
+  type: LoadBalancer
