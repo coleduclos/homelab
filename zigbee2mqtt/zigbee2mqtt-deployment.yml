@@ -50,8 +50,5 @@ spec:
         - name: usb
           hostPath:
             path: /dev/ttyUSB0
-        - name: zigbee2mqtt-config
-          configMap:
-            name: zigbee2mqtt-config
 
               
