@@ -30,6 +30,10 @@ spec:
             mountPath: /dev/zwave
         securityContext:
           privileged: true
+        resources:
+          limits:
+            cpu: "1"
+            memory: 512Mi
       nodeSelector:
         zwave-usb: "true"
       restartPolicy: Always
