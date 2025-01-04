@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zwave-js-ui
+  namespace: zwave-js-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zwave-js-ui
+  template:
+    metadata:
+      labels:
+        app: zwave-js-ui
+    spec:
+      containers:
+      - name: zwave-js-ui
+        image: zwavejs/zwave-js-ui:latest
+        ports:
+          - containerPort: 8091
+            name: http
+            protocol: TCP
+          - containerPort: 3000
+            name: websocket
+            protocol: TCP
+        volumeMounts:
+          - name: zwave-data
+            mountPath: /usr/src/app/store
+          - name: usb
+            mountPath: /dev/ttyUSB0
+        securityContext:
+          privileged: true
+      nodeSelector:
+        zwave-usb: "true"
+      restartPolicy: Always
+      
