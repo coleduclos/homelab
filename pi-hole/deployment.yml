@@ -22,9 +22,9 @@ spec:
           - name: dns-tcp
             containerPort: 53
             protocol: TCP
-          - name: dns-ucp
+          - name: dns-udp
             containerPort: 53
-            protocol: UCP
+            protocol: UDP
         volumeMounts:
           - name: pi-hole-data
             mountPath: /etc/pihole
