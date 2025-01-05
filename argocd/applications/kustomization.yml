@@ -6,3 +6,4 @@ resources:
   - home-assistant-application.yml
   - kube-prometheus-stack-application.yml
   - zigbee2mqtt-application.yml
+  - zwave-js-ui-application.yml
