@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: zwave-js-ui-ingressroute-certificate
+spec:
+  # Secret names are always required.
+  secretName: zwave-js-ui-ingressroute-certificate-secret
+  issuerRef:
+    name: route53-cluster-issuer
+    kind: ClusterIssuer
+  dnsNames:
+    - zwave.home.coleduclos.io

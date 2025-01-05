@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: zwave-js-ui
-  namespace: zwave-js-ui
 spec:
   replicas: 1
   selector:
