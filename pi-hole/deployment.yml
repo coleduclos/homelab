@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pi-hole
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pi-hole
+  template:
+    metadata:
+      labels:
+        app: pi-hole
+    spec:
+      containers:
+      - name: pi-hole
+        image: pihole/pihole:latest
+        ports:
+          - name: http
+            containerPort: 80
+            protocol: TCP
+          - name: dns-tcp
+            containerPort: 53
+            protocol: TCP
+          - name: dns-ucp
+            containerPort: 53
+            protocol: UCP
+        volumeMounts:
+          - name: pi-hole-data
+            mountPath: /etc/pihole
+        resources:
+          limits:
+            cpu: "1"
+            memory: 512Mi
+      restartPolicy: Always
+      volumes:
+        - name: pi-hole-data
+          persistentVolumeClaim:
+            claimName: pi-hole-data
+      
