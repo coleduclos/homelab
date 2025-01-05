@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: zwave-js-ui
 spec:
+  selector:
+    app: zwave-js-ui
   ports:
     - name: http
       port: 8091
@@ -10,5 +12,3 @@ spec:
     - name: websocket
       port: 3000
       targetPort: 3000
-  selector:
-    name: zwave-js-ui
