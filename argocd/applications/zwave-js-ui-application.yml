@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: zigbee2mqtt
+  name: zwave-js-ui
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/coleduclos/homelab.git
     targetRevision: HEAD
-    path: zigbee2mqtt
+    path: zwave-js-ui
   destination:
     server: https://kubernetes.default.svc
-    namespace: zigbee2mqtt
+    namespace: zwave-js-ui
   syncPolicy:
     automated: {}
