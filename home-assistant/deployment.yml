@@ -31,4 +31,5 @@ spec:
           persistentVolumeClaim:
             claimName: home-assistant-config
       hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
               
