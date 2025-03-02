@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: plex
-  namespace: plex
 spec:
   replicas: 1
   selector:
