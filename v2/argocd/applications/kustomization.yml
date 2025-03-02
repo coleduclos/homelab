@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: argocd
 resources:
   - cert-manager-application.yml
+  - plex-application.yml

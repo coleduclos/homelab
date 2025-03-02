@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: plex-ingressroute-certificate
+  namespace: plex
+spec:
+  # Secret names are always required.
+  secretName: plex-ingressroute-certificate-secret
+  issuerRef:
+    name: route53-cluster-issuer
+    kind: ClusterIssuer
+  dnsNames:
+    - plex.homelab.coleduclos.io

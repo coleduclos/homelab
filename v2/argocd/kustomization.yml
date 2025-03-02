@@ -4,7 +4,7 @@ namespace: argocd
 resources:
   - https://raw.githubusercontent.com/argoproj/argo-cd/v2.14.3/manifests/install.yaml
   - ingress-route.yml
-# - argocd-certificate.yml
+  - argocd-certificate.yml
   - applications/
 
 ## changes to config mapsgit co

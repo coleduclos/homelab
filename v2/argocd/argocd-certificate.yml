@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: argocd-ingressroute-certificate
+  namespace: argocd
+spec:
+  # Secret names are always required.
+  secretName: argocd-ingressroute-certificate-secret
+  issuerRef:
+    name: route53-cluster-issuer
+    kind: ClusterIssuer
+  dnsNames:
+    - argocd.homelab.coleduclos.io
