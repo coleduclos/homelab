@@ -13,21 +13,28 @@ spec:
         app: plex
     spec:
       containers:
-      - name: plex
-        image: lscr.io/linuxserver/plex:latest
-        env:
-          - name: TZ
-            value: "America/Denver"
-          - name: PUID
-            value: "1000"
-          - name: PGID
-            value: "1000"
-          - name: VERSION
-            value: docker
-        ports:
-          - name: http
-            containerPort: 32400
-            protocol: TCP
+        - name: plex
+          image: lscr.io/linuxserver/plex:latest
+          env:
+            - name: TZ
+              value: "America/Denver"
+            - name: PUID
+              value: "1000"
+            - name: PGID
+              value: "1000"
+            - name: VERSION
+              value: docker
+          ports:
+            - name: http
+              containerPort: 32400
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /media
+              name: plex-media 
       restartPolicy: Always
       hostNetwork: true
+      volumes:
+        - name: plex-media
+          persistentVolumeClaim:
+            claimName: plex-pvc-media
               
