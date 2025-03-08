@@ -19,9 +19,9 @@ spec:
             - name: TZ
               value: "America/Denver"
             - name: PUID
-              value: "1001"
+              value: "1000"
             - name: PGID
-              value: "1003"
+              value: "1000"
             - name: VERSION
               value: docker
             - name: PLEX_CLAIM
