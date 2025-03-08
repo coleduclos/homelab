@@ -24,6 +24,11 @@ spec:
               value: "1000"
             - name: VERSION
               value: docker
+            - name: PLEX_CLAIM
+              valueFrom:
+                secretKeyRef:
+                  name: plex-secret
+                  key: claim
           ports:
             - name: http
               containerPort: 32400
