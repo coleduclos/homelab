@@ -36,6 +36,7 @@ spec:
           volumeMounts:
             - mountPath: /config
               name: plex-config
+              subPath: config
             - mountPath: /media
               name: plex-media
       restartPolicy: Always
