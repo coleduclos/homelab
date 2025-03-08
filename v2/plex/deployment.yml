@@ -19,9 +19,9 @@ spec:
             - name: TZ
               value: "America/Denver"
             - name: PUID
-              value: "1000"
+              value: "1001"
             - name: PGID
-              value: "1000"
+              value: "1003"
             - name: VERSION
               value: docker
             - name: PLEX_CLAIM
@@ -34,11 +34,16 @@ spec:
               containerPort: 32400
               protocol: TCP
           volumeMounts:
+            - mountPath: /config
+              name: plex-config
             - mountPath: /media
-              name: plex-media 
+              name: plex-media
       restartPolicy: Always
       hostNetwork: true
       volumes:
+        - name: plex-config
+          persistentVolumeClaim:
+            claimName: plex-pvc-config
         - name: plex-media
           persistentVolumeClaim:
             claimName: plex-pvc-media
