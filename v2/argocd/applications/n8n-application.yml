@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: n8n
+  namespace: argocd
+spec:
+  project: default
+  sources:
+    - repoURL: https://github.com/coleduclos/homelab.git
+      targetRevision: HEAD
+      path: v2/n8n
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: n8n
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
