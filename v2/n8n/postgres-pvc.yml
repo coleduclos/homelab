@@ -3,6 +3,7 @@ apiVersion: v1
 metadata:
   name: postgresql-pvc
 spec:
+  storageClassName: ""
   volumeName: n8n-pv
   accessModes:
     - ReadWriteOnce
