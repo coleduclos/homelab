@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: n8n-pv
+spec:
+  storageClassName: ""
+  capacity:
+    storage: 400Gi
+  accessModes:
+    - ReadOnlyMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    path: /mnt/pool-01/kubernetes/n8n
+    server: truenas.localdomain
+    readOnly: true
