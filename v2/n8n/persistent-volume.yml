@@ -7,9 +7,9 @@ spec:
   capacity:
     storage: 400Gi
   accessModes:
-    - ReadOnlyMany
+    - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   nfs:
     path: /mnt/pool-01/kubernetes/n8n
     server: truenas.localdomain
-    readOnly: true
+    readOnly: false
