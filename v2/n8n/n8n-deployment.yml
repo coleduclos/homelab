@@ -22,7 +22,7 @@ spec:
           image: busybox:1.36
           command: ["sh", "-c", "chown 1000:1000 /data"]
           volumeMounts:
-            - name: n8n-claim0
+            - name: n8n-pvc
               mountPath: /data
       containers:
         - command:
