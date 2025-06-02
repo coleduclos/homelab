@@ -4,7 +4,7 @@ metadata:
   name: postgresql-pvc
 spec:
   storageClassName: ""
-  volumeName: n8n-pv
+  volumeName: n8n-pv-nfs
   accessModes:
     - ReadWriteOnce
   resources:
