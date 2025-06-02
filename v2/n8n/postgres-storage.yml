@@ -13,8 +13,6 @@ spec:
     path: /mnt/pool-01/kubernetes/n8n/postgres
     server: truenas.localdomain
     readOnly: false
-  mountOptions:
-    - vers=3
 
 ---
 
