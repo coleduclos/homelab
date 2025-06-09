@@ -53,6 +53,8 @@ spec:
               value: http
             - name: N8N_PORT
               value: "5678"
+            - name: N8N_EDITOR_BASE_URL
+              value: https://n8n.homelab.coleduclos.io
           image: n8nio/n8n
           name: n8n
           ports:
